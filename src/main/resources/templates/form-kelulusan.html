@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View All Students</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+</head>
+<body>
+<div th:replace="fragments/fragments :: header"></div>
+<h1 class="page-header">Problem Editor</h1>
+<form action="/mahasiswa/kelulusan/tahun_masuk/id_prodi" method="get">
+    <div>
+        <label for="tahun_masuk">Tahun Masuk</label> <input type="text" name="tahun_masuk" />
+    </div>
+    <div>
+        <label for="id_prodi">Program Studi</label> <input type="text" name="id_prodi" />
+    </div>
+    <div>
+        <button type="submit" name="action" value="Lihat">Save</button>
+    </div>
+</form>
+<div th:replace="fragments/fragments :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <title>Add student</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+<div th:replace="fragments/fragment :: header"></div>
+<h1 class="page-header">Problem Editor</h1>
+
+<form action="/mahasiswa/tambah/submit" method="post">
+    <div>
+        <label for="nama">Nama Lengkap</label> <input type="text" name="nama" />
+    </div>
+    <div>
+        <label for="tempat_lahir">Tempat Lahir</label> <input type="text" name="tempat_lahir" />
+    </div>
+    <div>
+        <label for="tanggal_lahir">Tanggal Lahir</label> <input type="text" name="tanggal_lahir" />
+    </div>
+    <div>
+        <label for="jenis_kelamin">Jenis Kelamin</label> <input type="text" name="jenis_kelamin" />
+    </div>
+    <div>
+        <label for="agama">Agama</label> <input type="text" name="agama" />
+    </div>
+    <div>
+        <label for="golongan_darah">Golongan Darah</label> <input type="text" name="golongan_darah" />
+    </div>
+    <div>
+        <label for="tahun_masuk">Tahun Masuk</label> <input type="text" name="tahun_masuk" />
+    </div>
+    <div>
+        <label for="jalur_masuk">Jalur Masuk</label> <input type="text" name="jalur_masuk" />
+    </div>
+    <div>
+        <label for="id_prodi">ID Program Studi</label> <input type="text" name="id_prodi" />
+    </div>
+    <div>
+        <button type="submit" name="action" value="save">Save</button>
+    </div>
+</form>
+<div th:replace="fragments/fragment :: footer"></div>
+</body>
+</html>
+
+

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View All Students</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+</head>
+<body>
+    <div th:replace="fragments/fragment :: header" class="thead-light"></div>
+        <h1>Data Mahasiswa</h1>
+            <h3 th:text="'Tahun   '+${mahasiswa.tahun_masuk}"></h3>
+            <h3 th:text="'Prodi   '+${mahasiswa.nama_prodi}"></h3>
+            <h3 th:text="'Fakultas  '+${mahasiswa.nama_fakultas}"></h3>
+            <h3 th:text="'Universitas  '+${mahasiswa.nama_univ}"></h3>
+            <h3 th:text="'Jumlah  '+${mahasiswa.total_mhs}"></h3>
+    <div th:replace="fragments/fragment :: footer"></div>
+</body>
+</html>

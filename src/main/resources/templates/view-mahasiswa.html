@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View All Students</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+</head>
+    <body>
+        <div th:replace="fragments/fragment :: header"></div>
+        <h1>Data Mahasiswa</h1>
+        <!--/*@thymesVar id="mahasiswa" type=""*/-->
+            <h3 th:text="'NPM   '+${mahasiswa.npm}"></h3>
+            <h3 th:text="'Nama  '+${mahasiswa.nama}"></h3>
+            <h3 th:text="'Tempat/Tanggal Lahir '+${mahasiswa.tempat_lahir}+${mahasiswa.tanggal_lahir}"></h3>
+            <h3 th:text="'Jenis Kelamin '+${mahasiswa.jenis_kelamin}"></h3>
+            <h3 th:text="'Agama '+${mahasiswa.agama}"></h3>
+            <h3 th:text="'Golongan Darah '+${mahasiswa.golongan_darah}"></h3>
+            <h3 th:text="'Tahun Masuk '+${mahasiswa.tahun_masuk}"></h3>
+            <h3 th:text="'Jalur Masuk '+${mahasiswa.jalur_masuk}"></h3>
+            <h3 th:text="'Status    '+${mahasiswa.status}"></h3>
+        <!--<h3 th:text="'NPM = ' + ${mahasiswa.id}">Student NPM</h3>-->
+        <!--<hr/>-->
+    <!--</div>-->
+        <div th:replace="fragments/fragment :: footer"></div>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <script type="text/javascript" charset="utf8" src="/js/jquery.dataTables.min.js"></script>
+    <title>Add student</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<title>Add</title>
+</head>
+<body>
+<div th:replace="fragments/fragment :: header"></div>
+<h1 class="page-header">Ubah Mahasiswa</h1>
+<table id="tableStudent">
+    <thead>
+    <tr>
+        <th>No</th>
+        <th>NPM</th>
+        <th>Nama</th>
+        <th>Program Studi</th>
+        <th>Tahun Masuk</th>
+        <th>Jalur Masuk</th>
+    </tr>
+    </thead>
+    <tbody>
+    <div th:each="student,iterationStatus: ${mahasiswa}" th:class="${iterationStatus.odd} ? 'odd'">
+        <tr th:each="mahasiswa, iterationStatus: ${mahasiswa}">
+            <td th:text="${iterationStatus.count}"></td>
+            <td th:text="${mahasiswa.npm}"></td>
+            <td th:text="${mahasiswa.nama}"></td>
+            <td th:text="${mahasiswa.id_prodi}"></td>
+            <td th:text="${mahasiswa.tahun_masuk}"></td>
+            <td th:text="${mahasiswa.jalur_masuk}"></td>
+            <td>
+                <a th:href="'/mahasiswa?npm='+${mahasiswa.npm}"><input type="button" class="btn btn-sm btn-info" value="Detail"></a>
+                <a th:href="'/mahasiswa/ubah/'+${mahasiswa.npm}"><input type="button" class="btn btn-sm btn-primary" value="Ubah"></a>
+            </td>
+        </tr>
+    </div>
+    </tbody>
+</table>
+</body>
+<script>
+    var table = $('#tableMahasiswa').DataTable();
+</script>
+<div th:replace="fragments/fragment :: footer"></div>
+</html>
